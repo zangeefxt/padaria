@@ -6,7 +6,7 @@ $banco = new Banco();
 $conexao = $banco->getConexao();
 
 $cliente = new Cliente($conexao);
-$stmt = $cliente->read($conexao);
+$stmt = $cliente->read();
 $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
@@ -24,7 +24,7 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
     <h2>Lista de Clientes<h2>
 
-            <table border="1">
+            <table border="10">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
@@ -42,7 +42,7 @@ $clientes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $cliente['cpf']; ?> </td>
                     <td>
                         <a href="form_atualizaCliente.php?id=<?php echo $cliente['id_cliente']; ?>">Editar</a>
-                        <a href="deletarCliente.php?id=<?php echo $cliente['id_cliente']; ?>">Excluir</a>
+                        <a href="deletaCliente.php?id=<?php echo $cliente['id_cliente']; ?>">Excluir</a>
                     </td>
                 </tr>
                 <?php } ?>
