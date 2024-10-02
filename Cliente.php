@@ -68,7 +68,7 @@
         }
 
         public function read() {
-            $query = "SELECT * FROM cleinte";
+            $query = "SELECT * FROM cliente";
             $stmt = $this->conexao->prepare($query);
             $stmt->execute();
 
