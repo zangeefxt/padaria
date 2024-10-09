@@ -88,9 +88,9 @@
         }
 
         public function update() {
-            $query = "UPDATE cliente SET nome=nome,
+            $query = "UPDATE cliente SET nome=:nome,
                             telefone=:telefone, email=:email,
-                            cpf=:cpf, WHERE id_cliente=:id";
+                            cpf=:cpf WHERE id_cliente=:id";
             $stmt = $this->conexao->prepare($query);
 
             $stmt->bindParam(":nome", $this->nome);
