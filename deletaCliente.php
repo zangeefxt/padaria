@@ -16,3 +16,4 @@
     } else {
         echo "Erro ao deletar o cliente.";
     }
+?>

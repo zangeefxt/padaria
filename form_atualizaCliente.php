@@ -20,3 +20,4 @@
     CPF: <input type="text" name="cpf" value="<?php echo $clienteSelecionado['cpf']; ?>">
     <input type="submit" value="Atualizar">
 </form>
+

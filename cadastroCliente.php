@@ -18,3 +18,4 @@
         }else {
             echo "Erro ao cadastrar o cliente!";
         }
+?>

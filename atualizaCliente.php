@@ -19,3 +19,4 @@
         } else {
             echo "Erro ao atualizar o cliente.";
         }
+?>
